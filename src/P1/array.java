@@ -65,9 +65,13 @@ public class array {
         
         double hasil = 0;
         for (int i = 0; i < matKul.length; i++) {
-            hasil += bobotNilaiAkhir[i];
+            if (i==4||i==7) {
+            hasil+= bobotNilaiAkhir[i]*3;   
+            }else{
+            hasil += bobotNilaiAkhir[i]*2;
+            }
         }
-        double IP = hasil / 8;
+        double IP = hasil / 18;
 
        
         System.out.printf("IP: %.2f\n", IP);
