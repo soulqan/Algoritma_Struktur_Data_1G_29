@@ -65,7 +65,7 @@ public class array {
         
         double hasil = 0;
         for (int i = 0; i < matKul.length; i++) {
-            if (i==4||i==7) {
+            if (i==3||i==6) {
             hasil+= bobotNilaiAkhir[i]*3;   
             }else{
             hasil += bobotNilaiAkhir[i]*2;
