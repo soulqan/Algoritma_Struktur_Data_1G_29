@@ -13,7 +13,9 @@ public class Buku29 {
     }
 
     void terjual(int jml){
-        stok -= jml;
+        if (stok>0) {
+            stok -= jml;
+        }
     }
     void restock(int jml){
         stok += jml;
@@ -21,5 +23,5 @@ public class Buku29 {
     void gantiHarga(int hrg){
         harga = hrg;
     }
-    
+
 }
