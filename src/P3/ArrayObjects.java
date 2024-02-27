@@ -5,9 +5,13 @@ import java.util.Scanner;
 public class ArrayObjects {
     public static void main(String[] args) {
         Scanner sc29=new Scanner(System.in);
-        PersegiPanjang[] ppArray= new PersegiPanjang[3];
+        System.out.print("Masukkan jumlah persegi panjang: ");
+        int PersegiPanjang=sc29.nextInt();
+        PersegiPanjang[] ppArray= new PersegiPanjang[PersegiPanjang];
+        
        
-        for (int i = 0; i < 3; i++) 
+       
+        for (int i = 0; i < PersegiPanjang; i++) 
         {
             ppArray[i]=new PersegiPanjang();
             System.out.println("Persegi panjang ke-"+i);
@@ -17,7 +21,7 @@ public class ArrayObjects {
             ppArray[i].lebar =sc29.nextInt();
         }
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < PersegiPanjang; i++) {
             System.out.println("Persegi Panjang ke-"+i);
             System.out.println("Panjang: "+ppArray[i].panjang+", Lebar: "+ppArray[i].lebar);
             
