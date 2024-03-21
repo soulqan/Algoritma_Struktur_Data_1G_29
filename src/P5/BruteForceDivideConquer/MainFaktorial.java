@@ -1,4 +1,4 @@
-package BruteForceDivideConquer;
+package P5.BruteForceDivideConquer;
 
 import java.util.Scanner;
 

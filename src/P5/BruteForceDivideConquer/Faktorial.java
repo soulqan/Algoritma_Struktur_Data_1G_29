@@ -1,4 +1,4 @@
-package BruteForceDivideConquer;
+package P5.BruteForceDivideConquer;
 
 public class Faktorial {
     public int nilai;
