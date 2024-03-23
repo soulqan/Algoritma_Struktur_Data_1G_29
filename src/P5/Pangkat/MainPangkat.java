@@ -22,7 +22,7 @@ public class MainPangkat {
         System.out.println("Pilih metode yang ingin digunakan:");
         System.out.println("1. Brute Force");
         System.out.println("2. Divide and Conquer");
-        System.out.println("Masukkan pilihan Anda: ");
+        System.out.println("Masukkan pilihan Anda : ");
         int choice = sc28.nextInt();
 
         switch (choice) {
