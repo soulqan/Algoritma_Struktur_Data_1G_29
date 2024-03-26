@@ -45,4 +45,16 @@ public class DaftarMahasiswaBerprestasi {
             listMhs[i] = tmp;
         }
     }
+    void insertionSort(){
+        for (int i = 1; i < listMhs.length; i++) {
+            Mahasiswa temp = listMhs[i];
+            int j = i - 1;
+            while (j >= 0 && listMhs[j].ipk >temp.ipk) {
+                listMhs[j] = listMhs[j+1];
+                j--;
+                }
+                listMhs[j+1]=temp;
+            
+        }
+    }
 }
