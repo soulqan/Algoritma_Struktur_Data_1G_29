@@ -32,13 +32,11 @@ public class DaftarMahasiswaBerprestasi {
 
     void selectionSort(){
         for (int i = 0; i < listMhs.length-1; i++) {
-            int idxMin =i;
-            for (int j = 0; j < listMhs.length; j++) {
-                if(listMhs[j].ipk<listMhs[idxMin].ipk){
-                    idxMin=j;
-
+            int idxMin = i;
+            for (int j = i + 1; j < listMhs.length; j++) {
+                if(listMhs[j].ipk < listMhs[idxMin].ipk){
+                    idxMin = j;
                 }
-                
             }
             Mahasiswa tmp = listMhs[idxMin];
             listMhs[idxMin] = listMhs[i];
@@ -49,8 +47,8 @@ public class DaftarMahasiswaBerprestasi {
         for (int i = 1; i < listMhs.length; i++) {
             Mahasiswa temp = listMhs[i];
             int j = i - 1;
-            while (j >= 0 && listMhs[j].ipk >temp.ipk) {
-                listMhs[j] = listMhs[j+1];
+            while (j >= 0 && listMhs[j].ipk>temp.ipk) {
+                listMhs[j+1]=listMhs[j];
                 j--;
                 }
                 listMhs[j+1]=temp;
