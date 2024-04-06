@@ -16,7 +16,7 @@ public class BukuMain28 {
             System.out.println("---------------------");
             System.out.print("Kode Buku \t: ");
             int kodeBuku = s. nextInt();
-            System.out.print("Judul Nuku \t: ");
+            System.out.print("Judul Buku \t: ");
             String judulBuku = s1.nextLine();
             System.out.print("Tahun Terbit \t: ");
             int tahunTerbit = s.nextInt();
@@ -43,6 +43,9 @@ public class BukuMain28 {
         data.TampilPosisi(cari, posisi);
 
         data.tampilData(cari, posisi);
+
+        Buku28 dataBuku28 = data.FindBuku(cari);
+        dataBuku28.tampilDataBuku();
     }
     
 }
