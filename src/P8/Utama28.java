@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Utama28 {
     public static void main(String[] args) {
         Gudang28 gudang = new Gudang28(7);
-        Scanner sc28= new Scanner(System.in);
+        Scanner sc28 = new Scanner(System.in);
         while (true) {
             System.out.println("\nMenu: ");
             System.out.println("1. Tambah barang");
@@ -13,13 +13,13 @@ public class Utama28 {
             System.out.println("3. Tampilkan tumpukan barang");
             System.out.println("4. Keluar");
             System.out.println("Pilih operasi: ");
-            int pilihan=sc28.nextInt();
+            int pilihan = sc28.nextInt();
             sc28.nextLine();
 
             switch (pilihan) {
                 case 1:
                     System.out.print("Masukkan kode barang: ");
-                    int kode =sc28.nextInt();
+                    int kode = sc28.nextInt();
                     sc28.nextLine();
                     System.out.print("Masukkan nama barang: ");
                     String nama = sc28.nextLine();
@@ -29,13 +29,13 @@ public class Utama28 {
                     gudang.tambahBarang(barangBaru);
                     break;
                 case 2:
-                gudang.ambilBarang();
-                break;
+                    gudang.ambilBarang();
+                    break;
                 case 3:
-                gudang.tampilkanBarang();
-                break;
+                    gudang.tampilkanBarang();
+                    break;
                 case 4:
-                break;
+                    break;
                 default:
                     System.out.println("Pilihan tidak valid. Silahkan coba lagi.");
             }
