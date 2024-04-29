@@ -1,4 +1,4 @@
-package P8;
+package P8.Gudang28;
 
 public class Barang28 {
   int kode;
