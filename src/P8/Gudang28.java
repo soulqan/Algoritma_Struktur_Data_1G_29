@@ -3,6 +3,7 @@ package P8;
 public class Gudang28 {
     Barang28[] tumpukan;
     int size,top;
+    
 
 public Gudang28(int kapasitas){
     size = kapasitas;
@@ -38,6 +39,7 @@ public Barang28 ambilBarang(){
         Barang28 delete = tumpukan[top];
         top--;
         System.out.println("Barang "+ delete.nama+" diambil dari Gudang");
+        System.out.println("Kode unik dalam biner: "+konversiDesimalKeBiner(delete.kode));
         return delete;
     }else{
         System.out.println("Tumpukan barang kosong ");
@@ -64,5 +66,19 @@ public void tampilkanBarang(){
     }else{
         System.out.println("Tumpukan barang kosong.");
     }
+}
+
+public String konversiDesimalKeBiner(int kode){
+    StackKonversi28 stack = new StackKonversi28();
+    while (kode>0){
+        int sisa = kode % 2;
+        stack.push(sisa);
+        kode = kode / 2;
+    }
+    String biner = new String();
+    while (!stack.isEmpty()) {
+       biner+=stack.pop(); 
+    }
+    return biner;
 }
 }
