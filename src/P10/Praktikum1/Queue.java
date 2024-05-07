@@ -1,12 +1,12 @@
-package P9.Praktikum2;
+package P10.Praktikum1;
 
 public class Queue {
-    Nasabah28[]data ;
+    int[] data;
     int front,rear,size,max;
 
     public Queue(int n){
         max = n;
-        data = new Nasabah28[max];
+        data = new int[max];
         size = 0;
         front = rear = -1;
     }
@@ -27,8 +27,7 @@ public class Queue {
 
     public void peek(){
         if (!isEmpty()) {
-            System.out.println("elemen terdepan: "+data[front].norek+" "+ data[front].nama+" "+ 
-            data[front].alamat+" "+ data[front].umur+" "+data[front].saldo);
+            System.out.println("elemen terdepan: "+data[front]);
         }else{
             System.out.println("Queue masih kosong");
         }
@@ -39,12 +38,10 @@ public class Queue {
         }else{
             int i = front;
             while (i != rear) {
-                System.out.println(data[i].norek+ " "+data[i].nama
-                +" "+ data[i].alamat+" "+ data[i].umur+" "+data[i].saldo);
+                System.out.print(data[i]+ " ");
                 i =(i + 1) % max;
             }
-            System.out.println(data[i].norek+ " "+data[i].nama
-            +" "+ data[i].alamat+" "+ data[i].umur+" "+data[i].saldo);
+            System.out.println(data[i] + " ");
             System.out.println("Jumlah elemen = "+size);
         }
     }
@@ -57,9 +54,10 @@ public class Queue {
             System.out.println("Queue masih kosong");
         }
     }
-    public void Enqueue(Nasabah28 dt){
+    public void Enqueue(int dt){
         if (isFull()) {
-            System.out.println("Queue sudah penuh");
+            System.out.println("Queue sudah penuh, program di hentikan");
+            System.exit(0);
         }else{
             if (isEmpty()) {
                 front = rear = 0;
@@ -74,10 +72,11 @@ public class Queue {
             size++;
         }
     }
-    public Nasabah28 Dequeue() {
-        Nasabah28 dt = new Nasabah28();
+    public int Dequeue() {
+        int dt = 0;
         if (isEmpty()) {
-            System.out.println("Queue masih kosong");
+            System.out.println("Queue masih kosong,program dihentikan!");
+            System.exit(0);
         }else{
             dt = data [front];
             size--;

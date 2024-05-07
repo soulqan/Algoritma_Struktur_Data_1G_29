@@ -1,4 +1,4 @@
-package P9.Praktikum2;
+package P10.Praktikum2;
 
 import java.util.Scanner;
 
@@ -9,6 +9,7 @@ public class QueueMain {
         System.out.println("2. Antrian keluar");
         System.out.println("3. Cek Antrian terdepan");
         System.out.println("4. Cek Semua Antrian");
+        System.out.println("5. Cek Antrian paling belakang");
         System.out.println("-------------------------");
     }
 
@@ -53,9 +54,12 @@ public class QueueMain {
                 case 4:
                     antri28.Print();
                     break;
+                case 5:
+                    antri28.peekRear();
+                    break;
 
             }
 
-        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4);
+        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4 || pilih == 5);
     }
 }
