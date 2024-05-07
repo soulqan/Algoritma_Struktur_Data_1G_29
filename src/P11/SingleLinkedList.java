@@ -64,22 +64,16 @@ public class SingleLinkedList {
 
 
     void insertAt(int index, int input) {
+        //Node ndInput = new Node();
         if (index < 0) {
-            System.out.println("Perbaiki logikanya! Kalau indeksnya -1 bagaimana?");
+            System.out.println("perbaiki logikanya! "
+                    + "kalau indeksnya -1 bagaimana???");
         } else if (index == 0) {
             addFirst(input);
         } else {
             Node temp = head;
-            for (int i = 0; i < index - 1; i++) {
-                if (temp == null) {
-                    System.out.println("Indeks melebihi batas");
-                    return;
-                }
+            for (int i = 0; i < index -1; i++) {
                 temp = temp.next;
-            }
-            if (temp == null) {
-                System.out.println("Indeks melebihi batas");
-                return;
             }
             temp.next = new Node(input, temp.next);
             if (temp.next.next == null) {
@@ -87,5 +81,4 @@ public class SingleLinkedList {
             }
         }
     }
-    
 }
